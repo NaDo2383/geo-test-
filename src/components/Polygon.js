@@ -25,7 +25,7 @@ export default function CurPolygon() {
       .then((res) => {
         console.log(res.data.result);
         setData(res.data.result);
-        // changePosition(res.data.result.geometry.coordinates[0]);
+        changePosition(res.data.result.geometry.coordinates[0]);
       })
       .catch((err) => {
         console.log(err);
@@ -33,16 +33,10 @@ export default function CurPolygon() {
   }
 
   function changePosition(arr) {
-    // data?.map((item) => {
-    //   currnetPolygon.push([item[1], item[0]]);
-    // });
-    // console.log(currnetPolygon);
-
     arr?.map((item) => {
-      const elem = item.splice(0, 1)[0];
-      item.splice(1, 0, elem);
+      currnetPolygon.push([item[1], item[0]]);
     });
-    console.log(arr);
+    console.log(currnetPolygon);
   }
 
   return (
@@ -58,10 +52,7 @@ export default function CurPolygon() {
       {data && (
         <>
           {changePosition(data?.geometry.coordinates[0])}
-          <Polygon
-            pathOptions={purpleOptions}
-            positions={[data?.geometry.coordinates[0]]}
-          />
+          <Polygon pathOptions={purpleOptions} positions={currnetPolygon} />
         </>
       )}
     </MapContainer>
