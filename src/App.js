@@ -4,12 +4,12 @@ import Polygon from "./components/Polygon";
 import Restaurants from "./components/restaurants";
 
 function App() {
-  return (
-    <div className="App">
-      <Restaurants />
-      <CurPolygon />
-    </div>
-  );
+    return (
+        <div className="App">
+            {/* <Restaurants /> */}
+            <CurPolygon />
+        </div>
+    );
 }
 
 export default App;
