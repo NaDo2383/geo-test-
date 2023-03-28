@@ -41,7 +41,7 @@ export default function CurPolygon() {
 
   return (
     <MapContainer
-      center={[9.9986585, -84.2040813]}
+      center={[40.848447, -73.856077]}
       zoom={1}
       scrollWheelZoom={false}
     >
