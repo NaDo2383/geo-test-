@@ -42,7 +42,7 @@ export default function CurPolygon() {
   return (
     <MapContainer
       center={[40.848447, -73.856077]}
-      zoom={1}
+      zoom={14}
       scrollWheelZoom={false}
     >
       <TileLayer
